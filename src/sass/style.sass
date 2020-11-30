@@ -1,0 +1,522 @@
+@import "~bootstrap/scss/bootstrap"
+@import "./reset"
+@import "./fonts"
+
+$enable-responsive-font-sizes: true
+
+$base-white: #F9F8F3
+$base-black: #2F2F2F
+$accent: #FFE176
+$blue: #141329
+$grey: #C2C2C2
+
+body
+    font-family: 'Freight'
+    color: $base-white
+
+.button
+    outline: none !important
+
+form, input
+    &:active, &:hover, &:focus
+        outline: none !important
+
+.section
+    padding: 70px 0
+    overflow: hidden
+
+    &-dark
+        color: $base-white
+        background-color: $blue
+
+    &-light
+        color: $base-black
+        background-color: $base-white
+
+.main
+    min-height: 100vh
+    background: url('../img/main-bg.png') center top / cover
+    padding: 60px 0
+
+    &__header
+        font-family: 'Playfair Display SC'
+        +rfs(100)
+        font-weight: bold
+        margin-bottom: 10px
+
+    &__desc
+        font-family: 'Playfair Display SC'
+        +rfs(36)
+        text-transform: uppercase
+        letter-spacing: 0.03em
+
+    &__cta-button
+        margin-right: 50px
+
+    &__button-wrapper
+        padding-top: 65px
+
+.menu
+
+    & li:last-child
+        margin-right: 0
+
+    & li:last-child ::after
+        z-index: -1
+
+    &__link
+        margin: 0 10px
+        color: $base-white
+        +rfs(20)
+        text-transform: uppercase
+        letter-spacing: 0.14em
+        font-weight: normal
+        position: relative
+        text-align: right
+
+        &::after
+            content: ''
+            width: 1px
+            height: 20px
+            position: absolute
+            background-color: $base-white
+            right: -10px
+
+.logo
+
+    &-wrapper
+        padding-top: 60px
+        padding-bottom: 20px
+
+.phone
+
+    &__number
+        +rfs(20)
+        letter-spacing: 0.14em
+        font-weight: normal
+        margin: auto 0
+
+    &__icon
+        margin-right: 10px
+        width: 31px
+        height: 31px
+
+.button
+    width: 265px
+    height: 75px
+    border: 3px solid $accent
+    border-radius: 8px
+    margin: 0 auto
+    vertical-align: middle
+    font-weight: bold
+    +rfs(30)
+    transition: all 0.5s ease
+
+    &-cta
+        background-color: $accent
+        color: $base-black
+        &:hover
+            background: #E0AE64
+            border: 3px solid #E0AE64
+
+    &-ghost
+        color: $base-white
+        background-color: transparent
+        &:hover
+            border: 3px solid #E0AE64
+
+    &-small
+        width: 174px
+        height: 41px
+        +rfs(22)
+        background-color: $accent
+        &:hover
+            background: #E0AE64
+            border: 3px solid #E0AE64
+
+.contact-us
+    padding-top: 79px
+    background-color: $blue
+    padding-bottom: 22px
+    border-bottom: 1px solid grey
+
+    &__header-wrapper
+        margin-bottom: 24px
+
+.form
+    max-width: 485px
+    padding-top: 55px
+
+    &__item
+        padding: 10px 0 10px 20px
+        margin-bottom: 20px
+        color: $base-black
+        width: 197px
+        height: 42px
+        margin-right: 20px
+
+    &__header
+        color: $base-white
+        font-weight: bold
+        +rfs(22)
+
+    &__header-wrapper
+        margin-bottom: 36px
+
+    &::placeholder
+        color: $base-black
+
+.footer
+    background-color: $blue
+    padding-top: 26px
+    padding-bottom: 27px
+
+    &__wrapper
+        width: 100%
+
+.footer__text
+    +rfs(11)
+    color: $base-white
+    text-align: center
+
+// About Us
+.about
+
+    &__pic
+        width: 100%
+        height: auto
+
+.section-header
+    +rfs(30)
+    font-weight: bold
+    text-align: center
+    margin-bottom: 30px
+
+.paragraph
+
+    &__text
+        color: $base-black
+        font-weight: 500
+        +rfs(20)
+        margin-bottom: 30px
+        line-height: 114%
+        text-align: justify
+
+    &__header
+        text-align: center
+        color: $base-black
+        font-weight: bold
+        +rfs(22)
+        margin-bottom: 30px
+        text-transform: uppercase
+
+// Why you should choose us
+.choose
+    font-weight: bold
+
+    &__item
+        text-align: center
+
+    &__item-title
+        +rfs(22)
+
+    &__item-img
+        margin-bottom: 14px
+
+// Commenter screen
+.comment
+    text-align: center
+    +rfs(20)
+
+    &__picture
+        margin: 0 auto 25px
+        max-width: 100px
+        height: auto
+
+    &__commenter-name
+        text-transform: uppercase
+        letter-spacing: 0.14em
+        font-weight: normal
+        margin-bottom: 21px
+
+    &__text
+        max-width: 687px
+        margin: 0 auto
+
+    &__selector
+        margin-top: 19px
+
+    &__selector-item
+        cursor: pointer
+        border-radius: 50%
+        height: 15px
+        width: 15px
+        background: $grey
+        margin-right: 13px
+
+        &:last-child
+            margin-right: 0
+
+        &.active
+            background: $accent
+
+.h3-header
+    +rfs(30)
+    color: $base-black
+    font-weight: bold
+
+.h3-header_white
+    color: $base-white
+
+//Gallery screen
+
+.gallery-section
+    padding: 80px 0
+    text-align: center
+    background: $blue
+
+.gallery
+
+    &__row
+        margin-bottom: 10px
+        height: 280px
+
+    &__image
+        width: 100%
+
+.one
+    background: url('../img/Food.png') center top / cover
+    max-width: 157px
+
+.two
+    background: url('../img/Food-1.png') center top / cover
+    max-width: 259px
+
+.three
+    background: url('../img/Food-2.png') center top / cover
+    max-width: 530px
+
+.four
+    background: url('../img/Food-3.png') center top / cover
+    max-width: 174px
+    margin-right: 0
+
+.five
+    background: url('../img/Food-4.png') center top / cover
+    max-width: 520px
+
+.six
+    background: url('../img/Food-5.png') center top / cover
+    max-width: 225px
+
+.seven
+    background: url('../img/Food-6.png') center top / cover
+    max-width: 388px
+    margin-right: 0
+
+.eight
+    background: url('../img/Food-7.png') center top / cover
+    max-width: 616px
+
+.nine
+    background: url('../img/Food-8.png') center top / cover
+    max-width: 505px
+    margin-right: 0
+
+//Menu section
+.food
+
+    &__price-wrapper
+        margin-bottom: 77px
+
+    &-menu
+        display: inline-block
+
+.price
+    display: inline-block
+
+    &::after
+        content: ''
+        width: 200px
+        height: 1px
+        background-color: $base-black
+        display: block
+        margin: 18px auto 0
+
+    &__tag
+        text-align: end
+        +rfs(48)
+        margin-right: 39px
+        margin-bottom: 6px
+
+    &__header
+        text-align: center
+        +rfs(19)
+        text-transform: uppercase
+        letter-spacing: 0.007em
+
+.food-menu
+
+    &__header
+        +rfs(22)
+        font-weight: bold
+        text-transform: uppercase
+        margin-right: 22px
+
+        &-wrapper
+            margin-bottom: 21px
+
+    &__items
+        max-width: 470px
+
+    &__item
+        margin-bottom: 32px
+        +rfs(20)
+        text-align: justify
+
+.cross
+
+    &__vertical
+
+        &::after
+            content: ''
+            width: 1px
+            height: 100%
+            position: absolute
+            background-color: $base-black
+            right: 34px
+
+    &__horizontal
+        position: relative
+
+        &::after
+            content: ''
+            width: 85%
+            height: 1px
+            position: absolute
+            background-color: $base-black
+            bottom: 0
+            left: 5%
+
+.util-padding-top
+    padding-top: 30px
+
+.menu-bg
+    background: url('../img/menu-bg.png') center center / cover
+
+.map
+
+    & iframe
+        max-height: 410px
+        width: 100%
+
+@media screen and (max-width: 576px)
+    .price
+        margin-bottom: 10px!important
+        &__header
+            +rfs(18)
+
+
+    .price__tag
+        font-size: 33px
+
+    .map iframe
+        max-height: 225px
+
+    .form__item
+        width: 100%
+        margin-right: 0
+
+    .form
+        width: 100%
+
+    .main__cta-button
+        margin-right: 0
+
+    .button-ghost
+        display: none
+
+@media screen and (max-width: 768px)
+    body
+        position: relative
+        overflow-x: hidden
+
+    .price
+        width: 350px
+        z-index: 1
+        color: #ffffff
+        margin-bottom: 5px
+
+        &__tag
+            text-align: end
+            margin-right: 0
+
+        &__header
+            width: auto!important
+            text-align: center
+
+        &::after
+            z-index: -1
+            top: 0
+            left: -500px
+            content: ''
+            width: 2000px
+            height: 62px
+            position: absolute
+            display: block
+            margin: 0
+
+    .food-menu__img
+        display: none
+
+    .menu__bg
+        background: url('../img/menu-bg.png') center center / auto
+
+    .food-menu
+        display: block
+        font-size: 13px
+
+    .about__pic
+        margin-bottom: 15px
+
+
+    .choose__item-title
+        margin-bottom: 20px
+
+    .social-media
+        margin-top: 15px
+
+@media screen and (max-width: 992px)
+    .contact-us
+
+        &__form
+            margin-bottom: 30px
+
+    .menu
+
+        &__link
+            +rfs(20)
+            margin: 0
+
+            &::after
+                width: 0
+
+        &__toggler
+            width: 30px
+            height: 3px
+            background-color: $base-white
+            margin-bottom: 5px
+
+@media screen and (max-width: 1200px)
+
+    .price
+        &__header
+            width: 255px
+
+    .cross
+
+        &__horizontal::after
+            display: none
+
+        &__vertical::after
+            display: none
